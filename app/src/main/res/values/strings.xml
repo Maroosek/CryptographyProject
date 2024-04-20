@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CryptoProject</string>
+    <string name="RSA">RSA</string>
+    <string name="aes">AES</string>
+    <string name="method">Chose your method</string>
+    <string name="passText">Random passwords</string>
+    <string name="numberpickertext">Number of passwords</string>
+    <string name="passwordhint">Enter your password</string>
+    <string name="generatebtnAES">Generate AES</string>
+    <string name="generatebtnRSA">Generate RSA</string>
+    <string name="Clear">Clear</string>
+    <string name="key_size">Key size</string>
+</resources>

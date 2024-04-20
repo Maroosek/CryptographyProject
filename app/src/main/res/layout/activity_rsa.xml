@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RSAActivity">
+
+    <TextView
+        android:id="@+id/textViewRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passText"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordRSA"
+        app:layout_constraintEnd_toEndOf="@+id/passwordRSA"
+        app:layout_constraintStart_toEndOf="@+id/numberPickerRSA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberpickertext"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerateKeysRSA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberPickerRSA"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRSA" />
+
+    <EditText
+        android:id="@+id/passwordRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/passwordhint"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewRSA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGenerateKeysRSA"
+        app:layout_constraintEnd_toStartOf="@+id/btnGenerateKeysRSA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRSA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewRSA"
+        app:layout_constraintTop_toTopOf="@+id/textViewRSA" />
+
+    <Button
+        android:id="@+id/btnGenerateKeysRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/generatebtnRSA"
+        app:layout_constraintBottom_toTopOf="@+id/listViewRSA"
+        app:layout_constraintEnd_toEndOf="@+id/passwordRSA"
+        app:layout_constraintStart_toStartOf="@+id/passwordRSA"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRSA" />
+
+    <ListView
+        android:id="@+id/listViewRSA"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/KeySizeRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_size"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRSA"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerRSA"
+        app:layout_constraintStart_toStartOf="@+id/spinnerRSA"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRSA" />
+
+    <Spinner
+        android:id="@+id/spinnerRSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/Clear"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGenerateKeysRSA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGenerateKeysRSA"
+        app:layout_constraintTop_toTopOf="@+id/btnGenerateKeysRSA"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

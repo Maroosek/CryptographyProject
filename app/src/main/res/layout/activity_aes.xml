@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AESActivity">
+
+    <TextView
+        android:id="@+id/textViewAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passText"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordAES"
+        app:layout_constraintEnd_toEndOf="@+id/passwordAES"
+        app:layout_constraintStart_toEndOf="@+id/numberPickerAES"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNumberPickerAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberpickertext"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerateKeysAES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberPickerAES"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAES" />
+
+    <EditText
+        android:id="@+id/passwordAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/passwordhint"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewAES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGenerateKeysAES"
+        app:layout_constraintEnd_toStartOf="@+id/btnGenerateKeysAES"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewAES"
+        app:layout_constraintTop_toTopOf="@+id/textViewAES" />
+
+    <Button
+        android:id="@+id/btnGenerateKeysAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/generatebtnAES"
+        app:layout_constraintBottom_toTopOf="@+id/listViewAES"
+        app:layout_constraintEnd_toEndOf="@+id/passwordAES"
+        app:layout_constraintStart_toStartOf="@+id/passwordAES"
+        app:layout_constraintTop_toBottomOf="@+id/passwordAES" />
+
+    <ListView
+        android:id="@+id/listViewAES"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/KeySizeAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_size"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerAES"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerAES"
+        app:layout_constraintStart_toStartOf="@+id/spinnerAES"
+        app:layout_constraintTop_toBottomOf="@+id/passwordAES" />
+
+    <Spinner
+        android:id="@+id/spinnerAES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/Clear"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGenerateKeysAES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGenerateKeysAES"
+        app:layout_constraintTop_toTopOf="@+id/btnGenerateKeysAES"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
