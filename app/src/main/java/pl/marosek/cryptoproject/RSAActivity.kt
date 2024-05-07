@@ -53,7 +53,7 @@ class RSAActivity : AppCompatActivity() {
         generateBtn.setOnClickListener {
 
             passList.clear()
-            refreshList(listViewRSA, passList)
+            //refreshList(listViewRSA, passList)
 
             val executionTime = measureTimeMillis {
 
@@ -90,7 +90,7 @@ class RSAActivity : AppCompatActivity() {
                         passList.add("Time taken: " + singleExecetionTyme.toString() + " ms")
                     }
 
-                    refreshList(listViewRSA, passList)
+
 
                 } else {
                     val singleExecutionTime = measureTimeMillis {
@@ -104,9 +104,10 @@ class RSAActivity : AppCompatActivity() {
                         passList.add("Decrypted password: " + rsa.decryptRSA(encrypted, keyRSA))
                     }
                     passList.add("Time taken: " + singleExecutionTime.toString() + " ms")
-                    refreshList(listViewRSA, passList)
+                    //refreshList(listViewRSA, passList)
                 }
             }
+            refreshList(listViewRSA, passList)
             passList.add("Execution time: " + executionTime.toString() + " ms")
             Toast.makeText(this, "Time: $executionTime ms", Toast.LENGTH_LONG).show()
         }
