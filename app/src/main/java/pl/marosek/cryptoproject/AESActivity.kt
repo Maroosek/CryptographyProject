@@ -76,7 +76,7 @@ class AESActivity : AppCompatActivity() {
                         //generateKeysRSA()
                     }
 
-                    refreshList(listViewRSA, passList)
+                    //refreshList(listViewRSA, passList)
 
                 } else {
                     val singleExecutionTime = measureTimeMillis {
@@ -92,10 +92,11 @@ class AESActivity : AppCompatActivity() {
                         passList.add("Decrypted password: " + aes.decryptAES(encrypted, secretKey, iv))
                     }
                     passList.add("Time taken: " + singleExecutionTime.toString() + " ms")
-                    refreshList(listViewRSA, passList)
+
                 }
             }
-            passList.add("Execution time: " + executionTime.toString() + " ms")
+            refreshList(listViewRSA, passList)
+            passList.add(0, "Execution time: " + executionTime.toString() + " ms")
 
             Toast.makeText(this, "Time: $executionTime ms", Toast.LENGTH_LONG).show()
         }

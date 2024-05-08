@@ -108,7 +108,7 @@ class RSAActivity : AppCompatActivity() {
                 }
             }
             refreshList(listViewRSA, passList)
-            passList.add("Execution time: " + executionTime.toString() + " ms")
+            passList.add(0,"Execution time: " + executionTime.toString() + " ms")
             Toast.makeText(this, "Time: $executionTime ms", Toast.LENGTH_LONG).show()
         }
     }
